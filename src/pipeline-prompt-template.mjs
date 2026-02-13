@@ -14,13 +14,13 @@ const model = new ChatOpenAI({
 });
 
 // A. 人设模块
-const personaPrompt = PromptTemplate.fromTemplate(
+export const personaPrompt = PromptTemplate.fromTemplate(
   `你是一名资深工程团队负责人，写作风格：{tone}。
 你擅长把枯燥的技术细节写得既专业又有温度。\n`
 );
 
 // B. 背景模块
-const contextPrompt = PromptTemplate.fromTemplate(
+export const contextPrompt = PromptTemplate.fromTemplate(
   `公司：{company_name}
 部门：{team_name}
 直接汇报对象：{manager_name}
